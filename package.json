@@ -1,0 +1,20 @@
+{
+  "name": "stay-pinned",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Stay Pinned Chrome extension and its end-to-end test suite.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test --test-concurrency=1 --test-reporter=spec test/*.test.js",
+    "test:headed": "HEADED=1 node --test --test-concurrency=1 --test-reporter=spec test/*.test.js",
+    "icons": "node scripts/render-icons.mjs",
+    "package": "rm -rf dist && mkdir -p dist && cd extension && zip -r -X -q ../dist/stay-pinned-$(node -p \"require('./manifest.json').version\").zip . -x '.*' -x '*/.*' && cd .. && unzip -l dist/*.zip",
+    "store:assets": "node store/build-assets.mjs"
+  },
+  "devDependencies": {
+    "puppeteer": "24.36.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

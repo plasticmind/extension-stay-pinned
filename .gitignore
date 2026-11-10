@@ -1,0 +1,7 @@
+node_modules/
+test/artifacts/
+test/.profiles/
+.stay-pinned-profile-*/
+*.log
+.DS_Store
+dist/

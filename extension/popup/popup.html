@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stay Pinned</title>
+  <link rel="stylesheet" href="../ui/base.css">
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="popup.js"></script>
+</head>
+<body>
+  <header class="header">
+    <img class="header-icon" src="../icons/icon.svg" alt="" width="20" height="20">
+    <h1 class="header-title">Stay Pinned</h1>
+    <a class="header-link" id="edit-link" href="../options/options.html">Edit pinned tabs</a>
+  </header>
+
+  <main class="content">
+    <section class="set" aria-labelledby="set-heading">
+      <h2 class="section-label" id="set-heading">
+        Pinned tabs <span class="count" id="set-count"></span>
+      </h2>
+
+      <ol class="set-list" id="set-list" aria-labelledby="set-heading" aria-busy="true"></ol>
+
+      <div class="empty-state" id="empty-state" hidden>
+        <p class="empty-title">You haven't saved any pinned tabs</p>
+        <p>To start, pin the tabs you want in this window. Then save them here, and every new window opens with them.</p>
+      </div>
+    </section>
+
+    <div class="actions" id="actions">
+      <button class="button button-primary" id="reset-button" type="button">Reset pinned tabs</button>
+      <button class="button" id="capture-button" type="button">Save this window's pinned tabs</button>
+
+      <div class="confirm" id="capture-confirm" role="group" aria-labelledby="capture-confirm-text" hidden>
+        <p id="capture-confirm-text"></p>
+        <div class="confirm-actions">
+          <button class="button button-primary" id="capture-confirm-button" type="button">Replace saved tabs</button>
+          <button class="button" id="capture-cancel-button" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+
+    <section class="shortcuts" aria-labelledby="shortcuts-heading">
+      <h2 class="section-label" id="shortcuts-heading">Keyboard shortcuts</h2>
+      <dl class="shortcut-list" id="shortcut-list"></dl>
+      <a class="shortcuts-link" id="change-shortcuts" href="chrome://extensions/shortcuts">Change shortcuts</a>
+    </section>
+  </main>
+</body>
+</html>

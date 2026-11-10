@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- An angled thumbtack: a dark cap and needle around a bright body, drawn upright and turned 45 degrees.
+       The gap between the cap and the body keeps the two parts distinct at 16 px.
+       Run "npm run icons" after you change this file to rebuild the PNGs. -->
+  <g transform="translate(53 75) rotate(45)">
+    <rect x="-34" y="-74" width="68" height="30" rx="15" fill="#0b57d0"/>
+    <path fill="#1a73e8" d="M-20 -36H20V-20Q20 -8 34 0L44 6Q50 10 50 16V20H-50V16Q-50 10 -44 6L-34 0Q-20 -8 -20 -20Z"/>
+    <path fill="#0b57d0" d="M-8 20H8L3 60Q0 66 -3 60Z"/>
+  </g>
+</svg>
